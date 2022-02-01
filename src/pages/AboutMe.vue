@@ -1,38 +1,32 @@
 <template>
-  <div class="bg-insta flex justify-center">
-    <div class="flex w-6/12 py-8 border-b">
-      <div class="basis-1/3">
-        <div class="flex w-100 justify-center items-center">
-          <img class="object-cover rounded-full w-40 h-40" src="/ava.jpg"/>
-        </div>
+  <div id="about-me" class="flex min-h-screen my-10 items-center">
+    <div class="flex-1"></div>
+    <div class="flex-1 flex flex-col h-full space-y-10">
+      <div class="text-2xl font-bold">
+        I'm Ho Khanh Vu<br />
+        Full-stack developer working for
+        <a href="https://onemount.com/" class="underline">One Distribution</a>
       </div>
-      <div class="flex flex-col basis-2/3">
-        <span class="text-3xl">vu.ho</span>
-        <div class="flex space-x-10 my-5">
-          <span><b>{{difYear}}</b> years</span>
-          <span><b>{{difMonth}}</b> months</span>
-          <span><b>{{difDay}}</b> days</span>
-        </div>
-        <div><b>Hồ Khánh Vũ</b></div>
+      <div class="text-xl">
+        I've spent 10+ years being a friend with the computer. 7+ years in
+        competitive programming and 5+ years studying different areas of
+        software engineering.
+      </div>
+      <div class="text-xl">
+        My first programming language was Pascal which I studied at High School.
+        Then I learned C++ by myself and used it to join many contests. Now I
+        can use a variant of languages, mainly GoLang, C++, VueJS, Java , and
+        Javascript.
+      </div>
+      <div class="text-xl">
+        In my free time, I do contests on CodeForce, CodeSignal, and many code
+        sites for relaxing after hard working time. And I enjoy learning,
+        playing games, and assembling Gunpla Kits.
       </div>
     </div>
   </div>
 </template>
-<script setup>
-import { computed } from "@vue/runtime-core"
 
-const birthDay = new Date(1998, 11,22)
+<script setup></script>
 
-const dif = computed(() => new Date(new Date().getTime() - birthDay.getTime()))
-
-const difYear = computed(() => dif.value.getUTCFullYear() - 1970)
-const difMonth = computed(() => dif.value.getUTCMonth())
-const difDay = computed(() => dif.value.getUTCDay())
-
-</script>
-<style>
-.ava {
-  width: 150px;
-  height: 150px;
-}
-</style>
+<style></style>
