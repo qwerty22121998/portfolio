@@ -1,38 +1,9 @@
 <template>
-  <div class="grid grid-cols-3 gap-4">
-    <div
-      v-for="item in career"
-      :key="item.name"
-      class="img cursor-pointer relative"
-    >
-      <img :src="item.logo" :alt="item.name" />
-      <div
-        class="
-          absolute
-          w-full
-          h-full
-          top-0
-          left-0
-          hover:opacity-100
-          opacity-0
-          bg-black bg-opacity-50
-          flex
-          justify-center
-          items-center
-          text-white
-        "
-      >
-        <div>
-          <p>{{ item.name }}</p>
-          <p>From : {{ item.from }}</p>
-          <p>To: {{ item.to }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Show :items="career"/>
 </template>
 
 <script setup>
+import Show from "./Show.vue"
 const career = [
   {
     logo: "/onemount.png",

@@ -14,6 +14,8 @@
           <span><b>{{difDay}}</b> days</span>
         </div>
         <div><b>Hồ Khánh Vũ</b></div>
+        <div>Birthday: 1998 Dec 12</div>
+       
       </div>
     </div>
   </div>
