@@ -1,6 +1,6 @@
 <template>
   <div id="project" class="min-h-screen">
-    <div class="text-xl pt-10">
+    <div class="text-xl pt-16">
       Sometimes, I build personal projects, enhance my skill, and ... for fun!
     </div>
     <div class="grid grid-cols-3 gap-4 pt-10 auto-rows-fr">
