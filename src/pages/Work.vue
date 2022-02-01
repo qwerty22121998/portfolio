@@ -29,13 +29,13 @@ const exp = [
     desc: "As a <b>back-end developer</b>. I work with VinShop team to build a B2B2C platform for <b>One Distribution</b>, a part of <b>One Mount Group</b>, Vietnam’s largest technological ecosystem that creates solutions along the entire value chain, starting with retail, distribution, real estate, and financial services.",
   },
   {
-    class: ["basis-1/2 bg-green-600"],
+    class: ["basis-full lg:basis-1/2 bg-green-600"],
     name: "Giao Hang Tiet Kiem",
     image: "/ghtk.webp",
     desc: "As a <b>full-stack developer</b> of the best Vietnamese E-Commerce platform. I've built and maintained many sub-projects like E-Invoice management system, Cash Flow management system and banking integrated system",
   },
   {
-    class: ["basis-1/2 bg-blue-400"],
+    class: ["basic-full lg:basis-1/2 bg-blue-400"],
     imgClass: [],
     name: "CyRadar",
     image: "/cyradar.png",
