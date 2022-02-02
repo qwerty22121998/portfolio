@@ -9,7 +9,17 @@
     <div v-if="working" class="absolute top-12 left-10 animate-bounce">
       Currently working
     </div>
-    <div class="text-3xl">{{ name }}</div>
+    <div>
+      <span class="text-3xl"
+        ><b>{{ name }}</b></span
+      >
+    </div>
+    <div>
+      <span v-if="from || to" class="text-sm">
+        [<span>From {{ from }} </span> <span v-if="to"> to {{ to }}</span
+        >]
+      </span>
+    </div>
     <img :src="image" :class="['w-1/2', ...(imgClass || [])]" />
     <div v-html="short"></div>
   </div>
@@ -26,6 +36,8 @@ const props = defineProps({
   name: "",
   short: "",
   detail: "",
+  from: "",
+  to: "",
 });
 
 const expand = ref(false);
