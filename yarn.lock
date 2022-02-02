@@ -49,6 +49,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@tweenjs/tween.js@^18.6.4":
+  version "18.6.4"
+  resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-18.6.4.tgz#40a3d0a93647124872dec8e0fd1bd5926695b6ca"
+  integrity sha512-lB9lMjuqjtuJrx7/kOkqQBtllspPIN+96OvTCeJ2j5FEzinoAXTdAMFnDAQT1KVPRlnYfBrqxtqP66vDM40xxQ==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -881,7 +886,15 @@ vite@^2.7.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vue@^3.2.25:
+vue3-scroll-spy@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vue3-scroll-spy/-/vue3-scroll-spy-1.0.8.tgz#1dea6928a7edd0932a629c8962792188dd26cb6b"
+  integrity sha512-7MBIteXsisL40ZIueHxYZL8OJTqMUO0jx/2N7R1pWMs8pIgNvyVbzuxlDvcwRtOvJxtyeuylg9fWAmLqxPnR4A==
+  dependencies:
+    "@tweenjs/tween.js" "^18.6.4"
+    vue "^3.0.6"
+
+vue@^3.0.6, vue@^3.2.25:
   version "3.2.29"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.29.tgz#3571b65dbd796d3a6347e2fd45a8e6e11c13d56a"
   integrity sha512-cFIwr7LkbtCRanjNvh6r7wp2yUxfxeM2yPpDQpAfaaLIGZSrUmLbNiSze9nhBJt5MrZ68Iqt0O5scwAMEVxF+Q==

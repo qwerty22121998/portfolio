@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col border p-5 shadow h-full justify-between">
+  <div
+    class="flex flex-col border p-5 shadow h-full justify-between bg-slate-100"
+  >
     <div class="text-2xl bg-black text-white">{{ name }}</div>
     <div v-if="tags">
       <span v-for="tag in tags" :key="tag"> #{{ tag }} </span>
@@ -26,7 +28,7 @@
 <script setup>
 const props = defineProps({
   name: "",
-  tags: [],
+  tags: null,
   short: "",
   long: "",
   live: "",

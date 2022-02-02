@@ -1,24 +1,40 @@
 <template>
-  <div id="work" class="flex flex-wrap justify-center min-h-screen">
-    <div
-      v-for="work in exp"
-      :key="work.name"
-      :class="[
-        'flex flex-col items-center justify-evenly p-10 relative',
-        ...work.class,
-      ]"
-    >
-      <div v-if="work.working" class="absolute top-12 left-10 float">
-        Currently working
+  <div id="work" class="flex min-h-screen pb-3 relative">
+    <NextPage>
+      <template #top>
+        <a href="#home"> <i class="fa-solid fa-hand-point-up" /> Home </a>
+      </template>
+      <template #bottom>
+        <a href="#project">
+          <i class="fa-solid fa-hand-point-down" /> Project
+        </a>
+      </template>
+    </NextPage>
+    <div class="flex flex-wrap mx-auto w-8/12">
+      <div class="basis-full">
+        <div class="text-5xl">Work Experience</div>
       </div>
-      <div class="text-3xl">{{ work.name }}</div>
-      <img :src="work.image" :class="['w-1/2', ...(work.imgClass || [])]" />
-      <div v-html="work.desc"></div>
+      <div
+        v-for="work in exp"
+        :key="work.name"
+        :class="[
+          'flex flex-col items-center justify-evenly shadow-inner p-10 relative zoom ',
+          ...work.class,
+        ]"
+      >
+        <div v-if="work.working" class="absolute top-12 left-10 animate-bounce">
+          Currently working
+        </div>
+        <div class="text-3xl">{{ work.name }}</div>
+        <img :src="work.image" :class="['w-1/2', ...(work.imgClass || [])]" />
+        <div v-html="work.desc"></div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import NextPage from "../components/NextPage.vue";
 const exp = [
   {
     working: true,

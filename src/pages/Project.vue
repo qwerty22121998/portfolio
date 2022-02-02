@@ -1,19 +1,33 @@
 <template>
-  <div id="project" class="min-h-screen">
-    <div class="text-xl pt-16">
-      Sometimes, I build personal projects, enhance my skill, and ... for fun!
-    </div>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-10 auto-rows-fr"
-    >
-      <div v-for="project in projects" :key="project.name">
-        <ProjectCard
-          :tags="project.tags"
-          :name="project.name"
-          :short="project.short"
-          :live="project.live"
-          :source="project.source"
-        />
+  <div id="project" class="flex min-h-screen relative">
+    <NextPage>
+      <template #top>
+        <a href="#work"> <i class="fa-solid fa-hand-point-up"></i> Work </a>
+      </template>
+      <template #bottom>
+        <a href="#about-me">
+          <i class="fa-solid fa-hand-point-down"></i> About Me
+        </a>
+      </template>
+    </NextPage>
+    <div class="mx-auto w-8/12">
+      <div class="text-5xl">Personal Projects</div>
+      <div class="text-xl">
+        Sometimes, I build personal projects, enhance my skill, and ... for fun!
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-10 auto-rows-fr"
+      >
+        <div v-for="project in projects" :key="project.name">
+          <ProjectCard
+            class="zoom"
+            :tags="project.tags"
+            :name="project.name"
+            :short="project.short"
+            :live="project.live"
+            :source="project.source"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -21,6 +35,8 @@
 
 <script setup>
 import ProjectCard from "@/components/ProjectCard.vue";
+import NextPage from "../components/NextPage.vue";
+
 const projects = [
   {
     name: "SLink",

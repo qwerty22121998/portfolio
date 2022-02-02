@@ -1,13 +1,16 @@
 <template>
   <div class="flex justify-end pr-5 bg-black text-white py-3">
-    <div class="flex justify-end space-x-4">
+    <div
+      class="flex justify-end space-x-4"
+      v-scroll-spy-active="{ selector: '.menu-item' }"
+    >
       <div
         v-for="item in menu"
         :key="item.name"
-        :class="[activated == item.name ? 'active' : '']"
+        class="menu-item"
         @click="active(item.name)"
       >
-        <a :href="item.url"> [{{ item.name }}] </a>
+        <a class="menu-link" :href="item.url"> [{{ item.name }}] </a>
       </div>
     </div>
   </div>
@@ -33,6 +36,10 @@ const menu = [
     name: "About Me",
     url: "#about-me",
   },
+  // {
+  //   name: "Connect",
+  //   url: "#connect",
+  // },
 ];
 
 const activated = ref("Home");
@@ -46,6 +53,8 @@ const active = (name) => {
 .active {
   color: red;
   transform: scale(1.3) rotateZ(10deg);
+}
+.menu-item {
   transition-duration: 0.5s;
 }
 </style>
