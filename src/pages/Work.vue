@@ -14,27 +14,23 @@
       <div class="basis-full">
         <div class="text-5xl">Work Experience</div>
       </div>
-      <div
+      <WorkExp
         v-for="work in exp"
         :key="work.name"
-        :class="[
-          'flex flex-col items-center justify-evenly shadow-inner p-10 relative zoom ',
-          ...work.class,
-        ]"
-      >
-        <div v-if="work.working" class="absolute top-12 left-10 animate-bounce">
-          Currently working
-        </div>
-        <div class="text-3xl">{{ work.name }}</div>
-        <img :src="work.image" :class="['w-1/2', ...(work.imgClass || [])]" />
-        <div v-html="work.desc"></div>
-      </div>
+        :working="work.working"
+        :divClass="work.class"
+        :image="work.image"
+        :imgClass="work.imgClass"
+        :name="work.name"
+        :short="work.desc"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 import NextPage from "../components/NextPage.vue";
+import WorkExp from "../components/WorkExp.vue";
 const exp = [
   {
     working: true,
