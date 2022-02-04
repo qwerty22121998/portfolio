@@ -51,8 +51,8 @@ const active = (name) => {
 
 <style>
 .active {
-  color: red;
-  transform: scale(1.3) rotateZ(10deg);
+  text-decoration: underline;
+  transform: scale(1.3);
 }
 .menu-item {
   transition-duration: 0.5s;

@@ -10,13 +10,13 @@
 
     <div class="flex justify-center items-center mx-auto w-8/12">
       <div class="flex flex-auto justify-start">
-        <div class="flex flex-col">
+        <div class="flex flex-col space-y-5">
           <div class="text-6xl">Hello.</div>
           <div class="text-6xl">I'm Vu</div>
           <div class="text-6xl">
             a full-stack developer<span class="blink">_</span>
           </div>
-          <div class="flex space-x-5 pl-10 pt-5">
+          <div class="flex space-x-5">
             <div v-for="(ref, idx) in refs" :key="idx" class="text-4xl">
               <a :href="ref.url">
                 <i :class="['relative', ref.icon]">

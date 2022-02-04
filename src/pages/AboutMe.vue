@@ -6,7 +6,7 @@
       </template>
     </NextPage>
     <div class="mx-auto w-8/12 space-y-10">
-      <div class="text-5xl">About Me</div>
+      <div class="text-5xl font-bold">About Me</div>
       <div class="flex items-center h-fit">
         <div class="flex-1 px-5">
           <img

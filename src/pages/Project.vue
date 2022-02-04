@@ -1,17 +1,7 @@
 <template>
   <div id="project" class="flex min-h-screen relative">
-    <NextPage>
-      <template #top>
-        <a href="#work"> <i class="fa-solid fa-hand-point-up"></i> Work </a>
-      </template>
-      <template #bottom>
-        <a href="#about-me">
-          <i class="fa-solid fa-hand-point-down"></i> About Me
-        </a>
-      </template>
-    </NextPage>
     <div class="mx-auto w-8/12">
-      <div class="text-5xl">Personal Projects</div>
+      <div class="text-5xl font-bold">Personal Projects</div>
       <div class="text-xl">
         Sometimes, I build personal projects, enhance my skill, and ... for fun!
       </div>
