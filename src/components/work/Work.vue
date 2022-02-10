@@ -10,7 +10,11 @@
         ]"
         @click="click"
       >
-        <Overlay />
+        <Overlay class="overlay">
+          <div class="hint absolute top-2 right-2">
+            <span class="text-white text-3xl fa fa-chevron-right" />
+          </div>
+        </Overlay>
         <div
           v-if="modelValue.working"
           class="absolute top-5 left-5 animate-bounce"
@@ -58,6 +62,18 @@ const click = () => {
   opacity: 80%;
   &:hover {
     opacity: 100%;
+  }
+}
+.overlay {
+  .hint {
+    opacity: 0;
+    transition-duration: 0.5s;
+    z-index: inherit;
+  }
+  &:hover {
+    .hint {
+      opacity: 40%;
+    }
   }
 }
 </style>

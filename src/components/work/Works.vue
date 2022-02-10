@@ -2,12 +2,18 @@
   <div class="flex relative">
     <div
       :class="[
-        'work absolute w-full h-full top-0 z-40',
+        'work absolute w-full h-full top-0 z-40 popup',
         data.active ? 'left-0' : 'work--hidden',
       ]"
       @click="clickWork(null)"
     >
-      <Overlay />
+      <Overlay>
+        <div class="right-2 top-1 absolute z-50">
+          <i
+            class="opacity-0 text-white back-btn text-9xl fa fa-chevron-left"
+          />
+        </div>
+      </Overlay>
       <div
         :class="[
           'flex h-full w-full relative',
@@ -71,6 +77,16 @@ provide("clickWork", clickWork);
     transform: scaleX(90%);
     z-index: -1;
     opacity: 0;
+  }
+}
+.popup {
+  .back-btn {
+    transition-duration: 0.3s;
+  }
+  &:hover {
+    .back-btn {
+      opacity: 20%;
+    }
   }
 }
 </style>
