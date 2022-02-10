@@ -5,16 +5,11 @@
     >
       <div
         :class="[
-          'flex flex-col border p-10 justify-between h-full relative work-item',
+          'flex basis-full flex-col p-10 h-full relative work-item',
           ...modelValue.class,
         ]"
         @click="click"
       >
-        <Overlay class="overlay">
-          <div class="hint absolute top-2 right-2">
-            <span class="text-white text-3xl fa fa-chevron-right" />
-          </div>
-        </Overlay>
         <div
           v-if="modelValue.working"
           class="absolute top-5 left-5 animate-bounce"
@@ -28,6 +23,9 @@
           </div>
           <div class="text-xl">[{{ modelValue.position }}]</div>
           <div>{{ modelValue.from }} - {{ modelValue.to }}</div>
+        </div>
+        <div class="hint absolute top-2 right-2">
+          <span class="text-white text-3xl fa fa-chevron-right" />
         </div>
       </div>
     </div>

@@ -1,19 +1,15 @@
 <template>
   <div class="flex relative">
+    <div class="flex">
+      <slot />
+    </div>
     <div
       :class="[
-        'work absolute w-full h-full top-0 z-40 popup',
+        'work absolute w-full h-full top-0 z-auto popup cursor-pointer',
         data.active ? 'left-0' : 'work--hidden',
       ]"
       @click="clickWork(null)"
     >
-      <Overlay>
-        <div class="right-2 top-1 absolute z-50">
-          <i
-            class="opacity-0 text-white back-btn text-9xl fa fa-chevron-left"
-          />
-        </div>
-      </Overlay>
       <div
         :class="[
           'flex h-full w-full relative',
@@ -32,18 +28,31 @@
             :src="data.activeData?.image"
           />
         </div>
-        <div class="flex flex-col items-center w-full p-20">
-          <div class="text-4xl font-bold">{{ data.activeData?.name }}</div>
-          <div class="text-2xl">[{{ data.activeData?.position }}]</div>
-          <div class="text-xl">
+        <div class="flex flex-col w-full p-20">
+          <div class="text-4xl font-bold mx-auto">
+            {{ data.activeData?.name }}
+          </div>
+          <div class="text-2xl mx-auto">[{{ data.activeData?.position }}]</div>
+          <div class="text-xl mx-auto">
             {{ data.activeData?.from }} - {{ data.activeData?.to }}
           </div>
           <div class="pt-5" v-html="data.activeData?.desc" />
+          <div
+            class="pt-5 opacity-80 hover:opacity-100 hover:underline hover:underline-offset-1"
+          >
+            <a :href="data.activeData?.homepage">
+              <i class="fa fa-home mr-2" />{{ data.activeData?.homepage }}
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex">
-      <slot />
+      <Overlay>
+        <div class="right-2 top-1 absolute">
+          <i
+            class="opacity-0 text-white back-btn text-9xl fa fa-chevron-left"
+          />
+        </div>
+      </Overlay>
     </div>
   </div>
 </template>

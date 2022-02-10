@@ -1,8 +1,12 @@
 <template>
-  <div id="work" class="flex min-h-screen">
-    <div class="mx-auto space-y-10">
-      <div class="text-5xl font-bold">Work experience</div>
-      <div class="h-full flex items-center pb-20">
+  <div id="work" class="flex flex-wrap min-h-screen">
+    <div class="w-full">
+      <div class="mx-auto w-8/12">
+        <div class="text-5xl font-bold">Work experience</div>
+      </div>
+    </div>
+    <div class="mx-auto pt-10 h-full flex-1">
+      <div class="h-ful flex items-center justify-center pb-20">
         <Works>
           <Work v-for="(work, idx) in exp" :key="idx" v-model="exp[idx]" />
         </Works>
@@ -30,6 +34,7 @@ const active = (idx) => {
 
 const exp = [
   {
+    homepage: "https://onemount.com",
     working: true,
     class: ["text-white bg-black"],
     imgClass: [],
@@ -41,6 +46,7 @@ const exp = [
     desc: "As a <b>back-end developer</b>. I work with VinShop team to build a B2B2C platform for <b>One Distribution</b>, a part of <b>One Mount Group</b>, Vietnam’s largest technological ecosystem that creates solutions along the entire value chain, starting with retail, distribution, real estate, and financial services.<br/>I'm core developer of <b>Fund management</b> that handle fund/budget allocations and transactions tracking in real time.",
   },
   {
+    homepage: "https://giaohangtietkiem.vn",
     class: ["bg-green-600"],
     name: "Giao Hang Tiet Kiem",
     image: "/ghtk.png",
@@ -50,6 +56,7 @@ const exp = [
     desc: "As a <b>full-stack developer</b> of the best Vietnamese E-Commerce platform. I've built and maintained many sub-projects like <b>E-Invoice management system</b>, <b>Cash Flow management system</b> and <b>banking integrated system</b>",
   },
   {
+    homepage: "https://cyradar.com",
     class: ["bg-blue-400"],
     imgClass: [],
     name: "CyRadar",
