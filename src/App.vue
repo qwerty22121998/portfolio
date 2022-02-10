@@ -18,7 +18,7 @@ import Footer from "@/pages/Footer.vue";
       <Work class="pt-14" />
       <Project class="pt-14" />
       <AboutMe class="pt-14" />
-      <Footer />
+      <Footer class="pt-14" />
     </div>
   </div>
 </template>

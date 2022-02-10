@@ -1,10 +1,5 @@
 <template>
   <div id="about-me" class="flex min-h-screen relative">
-    <NextPage>
-      <template #top>
-        <a href="#project"> <i class="fa-solid fa-hand-point-up" /> Project </a>
-      </template>
-    </NextPage>
     <div class="mx-auto w-8/12 space-y-10">
       <div class="text-5xl font-bold">About Me</div>
       <div class="flex items-center h-fit">
