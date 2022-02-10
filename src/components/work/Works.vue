@@ -2,11 +2,12 @@
   <div class="flex relative">
     <div
       :class="[
-        'work absolute w-full h-full top-0 z-50',
+        'work absolute w-full h-full top-0 z-40',
         data.active ? 'left-0' : 'work--hidden',
       ]"
       @click="clickWork(null)"
     >
+      <Overlay />
       <div
         :class="[
           'flex h-full w-full relative',
@@ -44,6 +45,7 @@
 <script setup>
 import { computed, provide, reactive, ref, useSlots } from "@vue/runtime-core";
 import Work from "./Work.vue";
+import Overlay from "@/components/Overlay.vue";
 const slot = useSlots();
 
 const data = reactive({
@@ -64,9 +66,11 @@ provide("clickWork", clickWork);
 .work {
   transition-duration: 0.3s;
   overflow: hidden;
-  transform-origin: 0% 0%;
+  transform-origin: 50% 50%;
   &--hidden {
-    transform: scale(0) translateY(-50%);
+    transform: scaleX(90%);
+    z-index: -1;
+    opacity: 0;
   }
 }
 </style>

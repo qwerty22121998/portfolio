@@ -1,11 +1,11 @@
 <template>
-  <div class="flex-1 work cursor-pointer">
+  <div class="flex-1 cursor-pointer">
     <div
       class="flex w-full h-full justify-center items-center text-center p-10"
     >
       <div
         :class="[
-          'flex flex-col border p-10 justify-between h-full relative',
+          'flex flex-col border p-10 justify-between h-full relative work-item',
           ...modelValue.class,
         ]"
         @click="click"
@@ -53,4 +53,11 @@ const click = () => {
 };
 </script>
 
-<style></style>
+<style scoped lang="postcss">
+.work-item {
+  opacity: 80%;
+  &:hover {
+    opacity: 100%;
+  }
+}
+</style>
