@@ -1,11 +1,11 @@
 <template>
-  <div class="flex-1 cursor-pointer">
+  <div class="basis-full lg:basis-1 flex-1 cursor-pointer">
     <div
-      class="flex w-full h-full justify-center items-center text-center p-10"
+      class="flex w-full h-full justify-center items-center text-center p-1 2xl:p-7 overlay"
     >
       <div
         :class="[
-          'flex basis-full flex-col p-10 h-full relative work-item',
+          'flex basis-full flex-col justify-between p-2 h-full relative work-item',
           ...modelValue.class,
         ]"
         @click="click"
@@ -16,13 +16,27 @@
         >
           Working
         </div>
-        <img class="object-cover mx-auto mb-5" :src="modelValue.image" />
+        <div class="h-full flex items-center">
+          <img
+            class="max-h-1/2 m-5 object-cover mx-auto mb-5"
+            :src="modelValue.image"
+          />
+        </div>
         <div>
-          <div class="text-2xl font-bold">
+          <div class="text-xl font-bold">
             {{ modelValue.name }}
           </div>
-          <div class="text-xl">[{{ modelValue.position }}]</div>
           <div>{{ modelValue.from }} - {{ modelValue.to }}</div>
+          <div>
+            <span class="text-sm">{{ modelValue.position }}</span>
+          </div>
+          <div class="space-x-2 text-xl">
+            <i
+              v-for="tech in modelValue?.techs || []"
+              :key="tech"
+              :class="['fa-brands', tech]"
+            />
+          </div>
         </div>
         <div class="hint absolute top-2 right-2">
           <span class="text-white text-3xl fa fa-chevron-right" />
@@ -57,9 +71,8 @@ const click = () => {
 
 <style scoped lang="postcss">
 .work-item {
-  opacity: 80%;
   &:hover {
-    opacity: 100%;
+    opacity: 80%;
   }
 }
 .overlay {

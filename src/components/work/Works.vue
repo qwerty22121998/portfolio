@@ -1,6 +1,6 @@
 <template>
-  <div class="flex relative">
-    <div class="flex">
+  <div class="flex relative w-full">
+    <div class="flex flex-wrap justify-between w-full">
       <slot />
     </div>
     <div
@@ -12,7 +12,7 @@
     >
       <div
         :class="[
-          'flex h-full w-full relative',
+          'flex flex-wrap lg:flex-nowrap h-full w-full relative',
           ...(data.activeData?.class || []),
         ]"
       >
@@ -22,13 +22,13 @@
         >
           Working
         </div>
-        <div class="max-w-80">
+        <div class="mx-auto max-w-80">
           <img
             class="object-contain p-10 w-full h-full"
             :src="data.activeData?.image"
           />
         </div>
-        <div class="flex flex-col w-full p-20">
+        <div class="flex flex-col w-full p-5">
           <div class="text-4xl font-bold mx-auto">
             {{ data.activeData?.name }}
           </div>
@@ -36,6 +36,7 @@
           <div class="text-xl mx-auto">
             {{ data.activeData?.from }} - {{ data.activeData?.to }}
           </div>
+
           <div class="pt-5" v-html="data.activeData?.desc" />
           <div
             class="pt-5 opacity-80 hover:opacity-100 hover:underline hover:underline-offset-1"
@@ -46,13 +47,9 @@
           </div>
         </div>
       </div>
-      <Overlay>
-        <div class="right-2 top-1 absolute">
-          <i
-            class="opacity-0 text-white back-btn text-9xl fa fa-chevron-left"
-          />
-        </div>
-      </Overlay>
+      <div class="right-2 top-1 absolute">
+        <i class="opacity-0 text-white back-btn text-9xl fa fa-chevron-left" />
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +80,7 @@ provide("clickWork", clickWork);
   overflow: hidden;
   transform-origin: 50% 50%;
   &--hidden {
-    transform: scaleX(90%);
+    transform: scaleX(1.1);
     z-index: -1;
     opacity: 0;
   }
