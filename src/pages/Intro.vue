@@ -8,7 +8,7 @@
       </template>
     </NextPage>
 
-    <div class="flex justify-center items-center mx-auto w-8/12">
+    <div class="flex justify-center items-center mx-auto">
       <div class="flex flex-auto justify-start">
         <div class="flex flex-col space-y-5">
           <div class="text-6xl">Hello.</div>

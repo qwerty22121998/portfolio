@@ -36,10 +36,10 @@ const menu = [
     name: "About Me",
     url: "#about-me",
   },
-  // {
-  //   name: "Connect",
-  //   url: "#connect",
-  // },
+  {
+    name: "Contact",
+    url: "#contact",
+  },
 ];
 
 const activated = ref("Home");

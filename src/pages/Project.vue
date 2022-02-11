@@ -1,31 +1,30 @@
 <template>
-  <div id="project" class="flex min-h-screen relative">
-    <div class="mx-auto w-8/12">
-      <div class="text-5xl font-bold">Personal Projects</div>
-      <div class="text-xl">
-        Sometimes, I build personal projects, enhance my skill, and ... for fun!
-      </div>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-10 auto-rows-fr"
-      >
-        <div v-for="project in projects" :key="project.name">
-          <ProjectCard
-            class="zoom"
-            :tags="project.tags"
-            :name="project.name"
-            :short="project.short"
-            :live="project.live"
-            :source="project.source"
-          />
-        </div>
+  <Screen id="project" title="Personal Projects">
+    <div class="text-xl pt-5">
+      Sometimes, I build personal projects, enhance my skill, and ... for fun!
+    </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-10 auto-rows-fr"
+    >
+      <div v-for="project in projects" :key="project.name">
+        <ProjectCard
+          class="zoom"
+          :tags="project.tags"
+          :name="project.name"
+          :short="project.short"
+          :live="project.live"
+          :source="project.source"
+        />
       </div>
     </div>
-  </div>
+  </Screen>
 </template>
 
 <script setup>
 import ProjectCard from "@/components/ProjectCard.vue";
 import NextPage from "../components/NextPage.vue";
+
+import Screen from "@/components/Screen.vue";
 
 const projects = [
   {

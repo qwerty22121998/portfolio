@@ -1,14 +1,11 @@
 <template>
-  <div id="work" class="flex flex-wrap min-h-screen">
-    <div class="mx-auto w-8/12">
-      <div class="text-5xl font-bold">Work experience</div>
-      <div class="h-full flex items-center justify-center pb-20">
-        <Works>
-          <Work v-for="(work, idx) in exp" :key="idx" v-model="exp[idx]" />
-        </Works>
-      </div>
+  <Screen id="work" title="Work experience">
+    <div class="h-full flex items-center justify-center pb-20">
+      <Works>
+        <Work v-for="(work, idx) in exp" :key="idx" v-model="exp[idx]" />
+      </Works>
     </div>
-  </div>
+  </Screen>
 </template>
 
 <script setup>
@@ -17,6 +14,7 @@ import NextPage from "../components/NextPage.vue";
 
 import Works from "@/components/work/Works.vue";
 import Work from "@/components/work/Work.vue";
+import Screen from "@/components/Screen.vue";
 
 const show = ref(0);
 

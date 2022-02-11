@@ -4,7 +4,7 @@ import Intro from "@/pages/Intro.vue";
 import Work from "@/pages/Work.vue";
 import AboutMe from "@/pages/AboutMe.vue";
 import Project from "@/pages/Project.vue";
-import Connect from "@/pages/Connect.vue";
+import Contact from "@/pages/Contact.vue";
 import Footer from "@/pages/Footer.vue";
 </script>
 
@@ -15,9 +15,10 @@ import Footer from "@/pages/Footer.vue";
   <div class="scroll-hide">
     <div v-scroll-spy="{ offset: 50 }">
       <Intro class="pt-14" />
-      <Work class="pt-14" />
-      <Project class="pt-14" />
-      <AboutMe class="pt-14" />
+      <Work class="pt-14 w-8/12 mx-auto" />
+      <Project class="pt-14 w-8/12 mx-auto" />
+      <AboutMe class="pt-14 w-8/12 mx-auto" />
+      <Contact class="pt-14 w-8/12 mx-auto" />
       <Footer class="pt-14" />
     </div>
   </div>
