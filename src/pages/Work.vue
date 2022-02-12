@@ -1,9 +1,25 @@
 <template>
   <Screen id="work" title="Work experience">
-    <div class="h-full flex items-center justify-center pb-20">
+    <div class="h-full flex flex-col justify-around pb-20">
       <Works>
         <Work v-for="(work, idx) in exp" :key="idx" v-model="exp[idx]" />
       </Works>
+      <div>
+        <div class="flex flex-col w-full">
+          <div class="text-2xl font-bold">Skill</div>
+          <div v-for="skill in skills" :key="skill.name">
+            {{ skill.name }}:
+            <div class="flex justify-evenly">
+              <img
+                v-for="img in skill.imgs"
+                :key="img"
+                class="max-h-20 border"
+                :src="`skills/${img}`"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </Screen>
 </template>
@@ -25,6 +41,24 @@ const active = (idx) => {
   }
   show.value = idx;
 };
+
+const skills = [
+  {
+    name: "Backend",
+    imgs: ["golang.svg", "cpp.svg", "php.svg", "java.svg", "nodejs.svg"],
+  },
+  {
+    name: "Frontend",
+    imgs: [
+      "html5.svg",
+      "css3.svg",
+      "js.svg",
+      "vue.svg",
+      "tailwind.svg",
+      "bootstrap.svg",
+    ],
+  },
+];
 
 const exp = [
   {

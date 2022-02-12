@@ -25,6 +25,10 @@ const menu = [
     url: "#home",
   },
   {
+    name: "About Me",
+    url: "#about-me",
+  },
+  {
     name: "Work",
     url: "#work",
   },
@@ -32,10 +36,7 @@ const menu = [
     name: "Project",
     url: "#project",
   },
-  {
-    name: "About Me",
-    url: "#about-me",
-  },
+
   {
     name: "Contact",
     url: "#contact",

@@ -5,7 +5,7 @@
     >
       <div
         :class="[
-          'flex basis-full flex-col justify-between p-2 h-full relative work-item',
+          'flex basis-full flex-col justify-between p-2 h-full relative work-item hover:translate-y-px hover:opacity-80',
           ...modelValue.class,
         ]"
         @click="click"
@@ -70,11 +70,6 @@ const click = () => {
 </script>
 
 <style scoped lang="postcss">
-.work-item {
-  &:hover {
-    opacity: 80%;
-  }
-}
 .overlay {
   .hint {
     opacity: 0;

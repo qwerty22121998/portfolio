@@ -2,11 +2,13 @@
   <div
     class="flex flex-col border p-5 shadow h-full justify-between bg-slate-100"
   >
-    <div class="pl-2 py-3 text-2xl bg-black text-white">{{ name }}</div>
-    <div v-if="tags" class="text-slate-500 text-xs">
-      <span v-for="tag in tags" :key="tag"> #{{ tag }} </span>
+    <div>
+      <div class="pl-2 py-3 text-2xl bg-black text-white">{{ name }}</div>
+      <div v-if="tags" class="text-slate-500 text-xs py-1">
+        <span v-for="tag in tags" :key="tag"> #{{ tag }} </span>
+      </div>
+      <hr />
     </div>
-    <hr />
     <div class="text-base">{{ short }}</div>
     <img :src="img" />
     <div class="flex space-x-5 pt-5 justify-between">
