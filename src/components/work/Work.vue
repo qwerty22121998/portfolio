@@ -5,7 +5,7 @@
     >
       <div
         :class="[
-          'flex basis-full flex-col justify-between p-2 h-full relative work-item hover:translate-y-px hover:opacity-80',
+          'flex basis-full flex-col justify-between p-2 h-full relative work-item transition-all opacity-90 hover:scale-105 hover:opacity-100',
           ...modelValue.class,
         ]"
         @click="click"

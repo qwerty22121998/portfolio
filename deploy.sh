@@ -20,7 +20,7 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USER>.github.io
-git push -f https://github.com/$USER/$USER.github.io.git main
+git push -f https://github.com/qwerty22121998/qwerty22121998.github.io.git main
 
 # if you are deploying to https://<USER>.github.io/<REPO>
 # git push -f git@github.com:<USER>/<REPO>.git main:gh-pages

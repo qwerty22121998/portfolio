@@ -1,24 +1,37 @@
 <template>
   <Screen id="work" title="Work experience">
-    <div class="h-full flex flex-col justify-around pb-20">
-      <Works>
-        <Work v-for="(work, idx) in exp" :key="idx" v-model="exp[idx]" />
-      </Works>
-      <div>
-        <div class="flex flex-col w-full">
-          <div class="text-2xl font-bold">Skill</div>
-          <div v-for="skill in skills" :key="skill.name">
-            {{ skill.name }}:
-            <div class="flex justify-evenly">
-              <img
-                v-for="img in skill.imgs"
-                :key="img"
-                class="max-h-20 border"
-                :src="`skills/${img}`"
-              />
+    <div class="h-full flex flex-col justify-evenly pb-20">
+      <div class="w-full">
+        <div class="text-3xl font-bold">Skill</div>
+        <div class="pt-3 p-3 flex w-full">
+          <div
+            v-for="skillSet in skills"
+            :key="skillSet.name"
+            class="flex-1 flex-col m-2 p-2 grayscale hover:grayscale-0 hover:scale-105 transition-all"
+          >
+            <div class="font-bold text-base">{{ skillSet.name }}:</div>
+            <div class="flex flex-wrap justify-evenly items-center">
+              <div
+                :class="['basis-1/3 p-2', ...skill.class]"
+                v-for="skill in skillSet.skills"
+                :key="skill.img"
+              >
+                <img
+                  class="object-contain max-h-16 h-full w-full"
+                  :src="`skills/${skill.img}`"
+                  :alt="skill.name"
+                  :title="skill.name"
+                />
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="w-full">
+        <div class="text-3xl font-bold">Work</div>
+        <Works>
+          <Work v-for="(work, idx) in exp" :key="idx" v-model="exp[idx]" />
+        </Works>
       </div>
     </div>
   </Screen>
@@ -45,17 +58,41 @@ const active = (idx) => {
 const skills = [
   {
     name: "Backend",
-    imgs: ["golang.svg", "cpp.svg", "php.svg", "java.svg", "nodejs.svg"],
+    skills: [
+      { class: [], name: "Go Lang", img: "golang.svg" },
+      { class: [], name: "C++", img: "cpp.svg" },
+      { class: [], name: "PHP", img: "php.svg" },
+      { class: [], name: "Java", img: "java.svg" },
+      { class: [], name: "NodeJS", img: "nodejs.svg" },
+    ],
   },
   {
     name: "Frontend",
-    imgs: [
-      "html5.svg",
-      "css3.svg",
-      "js.svg",
-      "vue.svg",
-      "tailwind.svg",
-      "bootstrap.svg",
+    skills: [
+      { class: [], name: "HTML", img: "html5.svg" },
+      { class: [], name: "CSS", img: "css3.svg" },
+      { class: [], name: "Javascript", img: "js.svg" },
+      { class: [], name: "VueJS", img: "vue.svg" },
+      { class: [], name: "Tailwind", img: "tailwind.svg" },
+      { class: [], name: "Bootstrap", img: "bootstrap.svg" },
+    ],
+  },
+  {
+    name: "Database",
+    skills: [
+      { class: [], name: "MySQL", img: "mysql.svg" },
+      { class: [], name: "MongoDB", img: "mongo.svg" },
+    ],
+  },
+  {
+    name: "Tools",
+    skills: [
+      { class: [], name: "Visual Studio Code", img: "vscode.svg" },
+      { class: [], name: "GoLand", img: "goland.svg" },
+      { class: [], name: "DataGrip", img: "datagrip.svg" },
+      { class: [], name: "Postman", img: "postman.svg" },
+      { class: [], name: "Google Cloud", img: "ggcloud.svg" },
+      { class: [], name: "Docker", img: "docker.svg" },
     ],
   },
 ];
