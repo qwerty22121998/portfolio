@@ -14,3 +14,7 @@
   src: url("../font/JetBrainsMono-Italic.woff2");
   font-style: italic;
 }
+
+a:hover {
+  text-shadow: 2px 0 0 red;
+}

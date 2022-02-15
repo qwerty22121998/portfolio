@@ -13,13 +13,13 @@ import Footer from "@/pages/Footer.vue";
     <Nav class="absolute top-0 w-full z-50" />
   </div>
   <div class="scroll-hide">
-    <div v-scroll-spy="{ offset: 50 }">
-      <Intro class="pt-14" />
-      <AboutMe class="pt-14 w-8/12 mx-auto" />
-      <Work class="pt-14 w-8/12 mx-auto" />
-      <Project class="pt-14 w-8/12 mx-auto" />
-      <Contact class="pt-14 w-8/12 mx-auto" />
-      <Footer class="pt-14" />
+    <div v-scroll-spy="{ offset: 50 }" class="flex flex-col">
+      <Intro />
+      <AboutMe class="w-8/12 mx-auto" />
+      <Work class="w-8/12 mx-auto" />
+      <Project class="w-8/12 mx-auto" />
+      <Contact class="w-8/12 mx-auto" />
+      <Footer />
     </div>
   </div>
 </template>

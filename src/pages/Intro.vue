@@ -1,13 +1,5 @@
 <template>
   <div id="home" class="flex min-h-screen relative">
-    <NextPage>
-      <template #bottom>
-        <a href="#work" class="animate-bounce text-3xl">
-          <i class="fa-solid fa-hand-point-down"></i> My Work
-        </a>
-      </template>
-    </NextPage>
-
     <div class="flex justify-center items-center mx-auto">
       <div class="flex flex-auto justify-start">
         <div class="flex flex-col space-y-5">

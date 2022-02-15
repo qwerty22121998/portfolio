@@ -10,7 +10,7 @@
             class="flex-1 flex-col m-2 p-2 grayscale hover:grayscale-0 hover:scale-105 transition-all"
           >
             <div class="font-bold text-base">{{ skillSet.name }}:</div>
-            <div class="flex flex-wrap justify-evenly items-center">
+            <div class="flex flex-wrap justify-start items-center">
               <div
                 :class="['basis-1/3 p-2', ...skill.class]"
                 v-for="skill in skillSet.skills"
