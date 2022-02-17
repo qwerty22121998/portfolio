@@ -1,6 +1,6 @@
 <template>
   <Screen id="education" title="Education - Award">
-    <div>
+    <div class="pt-14">
       <div v-for="school in story" :key="school.name">
         <div class="bg-black text-white p-2">
           <div class="flex justify-between">
